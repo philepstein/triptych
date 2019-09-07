@@ -1,0 +1,91 @@
+/* css/style.css */
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.main-page {
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-box {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+.left-comicbox {
+  position: relative;
+  float: left;
+  width: 33%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 3px solid red;
+  animation: roll 3s infinite;;
+}
+
+.middle-comicbox {
+  position: relative;
+  float: left;
+  width: 33%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 3px solid green;
+  animation: resize 3s infinite;
+}
+
+.right-comicbox {
+  position: relative;
+  float: left;
+  width: 34%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 3px solid blue;
+  animation: skew 3s infinite;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes resize {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes skew {
+  0% {
+    transform: skew(0deg, 0deg);
+  }
+  25% {
+    transform: skew(33deg, 33deg);
+  }
+  50% {
+    transform: skew(66deg, 66deg);
+  }
+  75% {
+    transform: skew(33deg, 33deg);
+  }
+  100% {
+    transform: skew(0deg, 0deg);
+  }
+}
